@@ -1,13 +1,5 @@
-<p-card header="{{ housingLocation.name }}" subheader="{{ housingLocation.city}}" [style]="{ width: '360px' }">
-    <ng-template pTemplate="header">
-        <img alt="Card" [src]="housingLocation.photo" />
-    </ng-template>
-    <p class="m-0">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-        quas!
-    </p>
-    <ng-template pTemplate="footer">
-        <p-button label="Save" icon="pi pi-check"></p-button>
-        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-    </ng-template>
-</p-card>
+<section class="listing">
+    <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+    <h2 class="listing-heading">{{ housingLocation.name }}</h2>
+    <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
+</section>

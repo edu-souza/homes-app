@@ -1,15 +1,10 @@
 <section>
   <form>
-    <span class="p-input-icon-left">
-      <i class="pi pi-search"></i>
-      <input type="text" pInputText />
-    </span>
-    <button>Search</button>
+    <input type="text" placeholder="Filter by city">
+    <button class="primary" type="button">Search</button>
   </form>
 </section>
-<section>
-  <div class="flex">
-    <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
-    </app-housing-location>
-  </div>
+<section class="results">
+  <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
+  </app-housing-location>
 </section>
